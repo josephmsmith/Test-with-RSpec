@@ -1,0 +1,43 @@
+# What is Rspec?
+Ruby Specifications
+
+# What are the reason NOT to test?
+Writing tests costs money - it takes time
+
+# What are the reason to test?
+- Finds bugs
+- Critical thinking about the application
+- Covers edges cases
+- Exposes poorly written code (code smells)
+- Increases code confidence
+    -- You should be able to refactor with the same results
+- Saves dev time
+
+# What is writing in a User story?
+- Description of the experience of a user of your software
+- Planning tool with developers and users
+- Given..When..then
+
+# What to test
+- happy path
+- unhappy path
+- edge cases
+- any bug that gets fixed
+
+# Basic RSpec Hierarchy
+- car_spec.rb 
+-- describe 
+--- describe context
+---- it
+----- expect().to()
+
+## alternatives to expect().to eq()
+always use infinitives - "to something"
+expect().to_not eq()
+expect().to match_array()
+
+## alternatives to running spec
+rspec spec/file_name.rb --format documentation OR -f d 
+rspec spec/file_name.rb --format --color
+rspec spec/file_name.rb --fail-fast # exit early 
+rspec spec/file_name.rb:7 # run one test
